@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /cbase/
+	RewriteRule ^methods\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /cbase/methods.php [L]
+</IfModule>
